@@ -2,7 +2,7 @@
 
 Message app is a Xamarin Cross Platform app that you can send sms to your relatives.
 
-#For Groups
+# For Groups
 
 ## You can create a Group and you can add, delete and update people.
 
@@ -10,10 +10,10 @@ Message app is a Xamarin Cross Platform app that you can send sms to your relati
 
 ## You can send sms to a whole group. 
 
-#For Single Contact
+# For Single Contact
 
-##You can create a contact and you can add, delete and update the contact.
+## You can create a contact and you can add, delete and update the contact.
 
-##You can assign this contact to a single group or multiple groups.
+## You can assign this contact to a single group or multiple groups.
 
-##You can send sms to the contact.
+## You can send sms to the contact.
