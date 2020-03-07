@@ -1,0 +1,3 @@
+*.* linguist-language=C#
+*.ASM linguist-vendored=true
+*.ASM linguist-detectable=false
