@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VizyonMesajMobil.Views.RehberDetailPage"
+             Title="Rehber"
+             BackgroundColor="#252a34">
+
+    <StackLayout Spacing="15" Padding="15">
+        <Label LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="İsim" TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text="{Binding Item.Adi}" FontSize="25" TextColor="#eaeaea"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Soyisim" TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text="{Binding Item.Soyadi}" FontSize="25" TextColor="#eaeaea"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Telefon no 1 " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text="{Binding Item.GsmNo1}" FontSize="25" TextColor="#eaeaea"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Telefon no 2 " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text="{Binding Item.GsmNo2}" FontSize="25" TextColor="#eaeaea"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>        
+        <ListView x:Name="gruplist"
+                  ItemSelected="OnItemSelected"
+                  BackgroundColor="#252a34">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="5" Padding="10">
+                            <Label LineBreakMode="WordWrap">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Grup Adı " TextColor="#ED9390" FontAttributes="Bold" FontSize="20"/>
+                                        <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="20"/>
+                                        <Span Text="{Binding GrupAdi}" FontSize="20" TextColor="#eaeaea"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Güncelle" CornerRadius="10" Clicked="Update_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+        <Button Text="Kaydı Sil" CornerRadius="10" Clicked="Delete_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+        <Button Text="Mesaj Gönder" CornerRadius="10" Clicked="SMS_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+    </StackLayout>
+
+</ContentPage>

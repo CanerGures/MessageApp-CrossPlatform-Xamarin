@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VizyonMesajMobil.Views.GrupDetailPage"
+             BackgroundColor="#252a34">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Gruba Kişi Ekle" Clicked="ToolbarItem_Clicked_1" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <StackLayout Spacing="15" Padding="15" BackgroundColor="#252a34">
+        <Label LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="İsim" TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="25"/>
+                    <Span Text="{Binding Grup.GrupAdi}" FontSize="25" TextColor="#eaeaea"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <ListView x:Name="userlist"
+                  ItemSelected="OnItemSelected"
+                  BackgroundColor="#252a34">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="5" Padding="5">
+                            <Label LineBreakMode="WordWrap">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Kişi Adı " TextColor="#ED9390" FontAttributes="Bold" FontSize="20"/>
+                                        <Span Text=" : " TextColor="#ED9390" FontAttributes="Bold" FontSize="20"/>
+                                        <Span Text="{Binding Adi}" FontSize="20" TextColor="#eaeaea"/>
+                                        <Span Text=" " FontSize="20"/>
+                                        <Span Text="{Binding Soyadi}" FontSize="20" TextColor="#eaeaea"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Güncelle" CornerRadius="10" Clicked="Update_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+        <Button Text="Grubu Sil" CornerRadius="10" Clicked="Delete_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+        <Button Text="Gruba Mesaj At" CornerRadius="10" Clicked="SMS_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+    </StackLayout>
+</ContentPage>

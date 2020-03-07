@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VizyonMesajMobil.Views.GrupMessageRegistry"
+             BackgroundColor="#252a34">
+    <ContentPage.Content BackgroundColor="#252a34">
+        <Grid Padding="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+            </Grid.RowDefinitions>
+            <Label Text="Grup Mesajı" Grid.Row="0" HorizontalOptions="Center" FontSize="35" TextColor="#eaeaea"  />
+            <Editor Placeholder="Lütfen Grup Mesajınızı Buraya Yazın" PlaceholderColor="#ED9390" Grid.Row="1" Keyboard="Text" x:Name="myEditor" TextColor="#ED9390" BackgroundColor="#252a34"/>
+            <Grid Row="4" Padding="10">
+                <Button Text="Gönder" CornerRadius="10" Clicked="SMSendd_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

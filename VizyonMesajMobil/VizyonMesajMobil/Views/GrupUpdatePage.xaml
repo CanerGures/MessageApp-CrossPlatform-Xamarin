@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VizyonMesajMobil.Views.GrupUpdatePage"
+             BackgroundColor="#252a34">
+    <ContentPage.Content>
+        <StackLayout Spacing="5" Padding="15">
+            <Label Text="Grup İsmi" FontSize="25" TextColor="#eaeaea" x:Name="GrupNameLabel" />
+            <Entry Text="{Binding Item.GrupAdi}" FontSize="20" x:Name="GrupNameEntry" Keyboard="Text" TextColor="#ED9390"  />
+            
+            <Button Text="Güncelle" CornerRadius="10" Clicked="Update_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

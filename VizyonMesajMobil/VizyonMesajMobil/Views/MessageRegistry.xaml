@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VizyonMesajMobil.Views.MessageRegistry"
+             BackgroundColor="#252a34">
+    <ContentPage.Content>
+        <Grid Padding="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="Kişisel Mesaj" Grid.Row="0" HorizontalOptions="Center" FontSize="35" TextColor="#eaeaea"  />
+                <Editor Placeholder="Lütfen Mesajınızı Buraya Yazın" PlaceholderColor="#ED9390" Keyboard="Text" x:Name="myEditor" TextColor="#ED9390" BackgroundColor="#252a34" HeightRequest="200" />
+                <Button Text="Gönder" CornerRadius="10" Clicked="SMSendd_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390" Margin="0,250,0,0"/>
+
+            </StackLayout>            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VizyonMesajMobil.Views.RehberUpdatePage"
+             xmlns:vm="clr-namespace:VizyonMesajMobil.ViewModels"
+             Title="Update Registry"
+             BackgroundColor="#252a34">
+    <ContentPage.Content>
+        <StackLayout Spacing="5" Padding="15">
+            <Label Text="İsim" FontSize="25" TextColor="#eaeaea" x:Name="NameLabel" />
+            <Entry Text="{Binding Item.Adi}" FontSize="20" x:Name="NameEntry" Keyboard="Text" TextColor="#ED9390"  />
+            <Label Text="Soyisim" FontSize="25" TextColor="#eaeaea" x:Name="SurnameLabel"/>
+            <Entry Text="{Binding Item.Soyadi}" FontSize="20" x:Name="SurnameEntry" Keyboard="Text" TextColor="#ED9390" />
+            <Label Text="Telefon no 1" FontSize="25" TextColor="#eaeaea" x:Name="Phone1Label"/>
+            <Entry Text="{Binding Item.GsmNo1}" FontSize="20" x:Name="Phone1Entry" Keyboard="Telephone" TextColor="#ED9390"/>
+            <Label Text="Telefon no 2" FontSize="25" TextColor="#eaeaea" x:Name="Phone2Label"/>
+            <Entry Text="{Binding Item.GsmNo2}" FontSize="20" x:Name="Phone2Entry" Keyboard="Telephone" TextColor="#ED9390"/>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <StackLayout x:Name="pickerStack" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                </StackLayout>
+                <Button Text="Grup + Ekle" Clicked="Button_Clicked" CornerRadius="20" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+            </StackLayout>
+            <Button Text="Güncelle" CornerRadius="10" Clicked="Update_Clicked" BackgroundColor="#1B998B" TextColor="#ED9390"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
